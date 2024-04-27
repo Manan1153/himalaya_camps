@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Himalayacamps</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- font awesome cdn -->
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        referrerpolicy="no-referrer" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" type="text/css" /><!-- fonts -->
+    <link href="../font/fonts.css" rel="stylesheet" /><!-- normalize css -->
+    <link href="css/normalize.css" rel="stylesheet" /><!-- custom css -->
+    <link href="css/utility.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/responsive.css" rel="stylesheet" />
+
+    <style>
+        /* Add CSS styles here */
+
+        header {
+            min-height: 85vh;
+            padding-top: 7rem;
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/Srinagar.jpg) center/cover no-repeat;
+            background: -o-linear-gradient((rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/Srinagar.jpg) center/cover no-repeat;
+            background: linear-gradient((rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/Srinagar.jpg) center/cover no-repeat;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        #heading {
+            color: white;
+        }
+
+        #heading2 {
+            color: white;
+            font-size: large;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image {
+            width: 430px;
+            height: 250px;
+            margin: 15px;
+            border: 2px solid #ccc;
+            border-radius: 9px;
+            overflow: hidden;
+
+        }
+
+        .image img {
+            max-width: 101%;
+            max-height: 100%;
+            /* object-fit: cover; */
+            object-fit: fill;
+        }
+
+
+        h3 {
+            text-align: center;
+            color: rgb(2, 17, 47);
+            /* background-color: rgb(246, 222, 192); */
+        }
+
+        .imagesSection {
+            /* background-color: white; */
+            background: linear-gradient(to bottom, rgba(173, 216, 230, 0.4), rgba(255, 255, 255, 0.4));
+            /* background: url("gif2.gif") center/cover no-repeat; */
+        }
+
+        .image {
+            transition: transform 0.3s;
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .lightbox-content {
+            display: block;
+            margin: 0 auto;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 35px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                /* optional */
+            }
+
+            .image {
+                width: 40%;
+                /* Adjust width as needed */
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- <nav class="navbar">
+        <div class="container flex">
+          <a href="../index.html" class="site-brand">
+            <span>Himalaya</span> Adventure and <span>Activity</span> Camp
+          </a>
+  
+          <button type="button" id="navbar-show-btn" class="flex">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div id="navbar-collapse">
+            <button type="button" id="navbar-close-btn" class="flex">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link"></a>
+              </li>
+              <li class="nav-item">
+                <a href="../gallery.html" class="nav-link">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a href="../activities.html" class="nav-link">Activities</a>
+              </li>
+              <li class="nav-item">
+                <a href="../about.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="../contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> -->
+    <!-- end of navbar  -->
+
+
+    <header class="flex header-sm">
+        <div class="container">
+            <div class="header-title">
+                <h1>Nainital</h1>
+                <h2>"The shimmering lake, the lush green hills, and the gentle breeze - Nainital's enchanting symphony."</h1>
+                    <!-- <p>Srinagar, the summer capital of the Indian-administered union territory of Jammu and Kashmir, is
+                        renowned for its breathtaking natural beauty. Nestled in the Himalayan region, Srinagar is a
+                        place of unparalleled charm and serenity.</p> -->
+            </div>
+        </div>
+    </header>
+    <br>
+<!-- 
+    <div class="packages-item">
+
+        <br>
+        <ul class="package-included">
+            <li>Nainital Lake</li>
+            <li>Naina Peak</li>
+            <li>Eco Cave Gardens</li>
+            <li>Zoo</li>
+            <li>Local Sightseeing</li>
+        </ul>
+        <br>
+
+    </div> -->
+
+    <section class="imagesSection">
+        <div class="image-container">
+            <div class="image image-wrapper3 gallery-item shadow">
+                <h3>Nainital Lake</h3>
+                <img src="../images/nainital/lake.jpg" height="250px" width="430px" alt="Image 1" onclick="openLightbox('../images/nainital/lake.jpg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Naina Peak</h3>
+                <img src="../images/nainital/peak.jpg" height="250px" width="430px" alt="Image 2" onclick="openLightbox('../images/nainital/peak.jpg')"/>
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Eco Cave Gardens</h3>
+                <img src="../images/nainital/eco cave.jpeg" height="250px" width="430px" alt="Image 2" onclick="openLightbox('../images/nainital/eco cave.jpeg')"/>
+            </div>
+            <div class="image image-wrapper3">
+                <h3>High Atitude Zoo</h3>
+                <img src="../images/nainital/zoo.jpg" height="250px" width="430px" alt="Image 3" onclick="openLightbox('../images/nainital/zoo.jpg')"/>
+            </div>
+            <!-- Add more images as needed -->
+    </section>
+
+    <button id="backButton">Go Back</button>
+    <script src="../js/lightbox.js"></script>
+
+    <script src="../js/lightbox.js"></script>
+    <div id="lightbox" class="lightbox">
+        <span class="close-button" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-image" class="lightbox-content" src="" alt="Image">
+    </div>
+
+
+</body>
+
+</html>

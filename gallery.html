@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Himalayacamps</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- fonts -->
+  <link rel="stylesheet" href="font/fonts.css" />
+  <!-- normalize css -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/utility.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <!-- navbar  -->
+  <nav class="navbar smaller-navbar">
+    <div class="container flex">
+      <a href="index.html" class="site-brand">
+        <span>Himalaya</span> Adventure and <span>Activity</span> Camp
+      </a>
+
+      <button type="button" id="navbar-show-btn" class="flex">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div id="navbar-collapse">
+        <button type="button" id="navbar-close-btn" class="flex">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="gallery.html" class="nav-link">Gallery</a>
+          </li>
+          <!-- <li class="nav-item">
+              <a href="activities.html" class="nav-link">Activities</a>
+            </li> -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="packages.html" class="nav-link">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end of navbar  -->
+
+  <!-- header -->
+  <header class="flex header-sm">
+    <div class="container">
+      <div class="header-title">
+        <h1>Gallery</h1>
+        <p>Enjoy some of the great moments captured on the camera.</p>
+      </div>
+    </div>
+  </header>
+  <!-- header -->
+
+  <!-- gallery section -->
+  <div id="gallery" class="py-4">
+    <div class="container">
+      <div class="gallery-row">
+        <div class="gallery-item shadow image-wrapper">
+          <img src="images/gallery 1.jpg" alt="gallery img" />
+        </div>
+        <div class="gallery-item shadow image-wrapper">
+          <img src="images/gallery 2.jpg" alt="gallery img" />
+        </div>
+        <div class="gallery-item shadow image-wrapper">
+          <img src="images/gallery 3.jpg" alt="gallery img" />
+        </div>
+        <div class="gallery-item shadow image-wrapper">
+          <img src="images/gallery 4.jpg" alt="gallery img" />
+        </div>
+        <div class="gallery-item shadow image-wrapper">
+          <img src="images/gallery 5.jpg" alt="gallery img" />
+        </div>
+        <div class="gallery-item shadow image-wrapper">
+          <img src="images/gallery 6.jpg" alt="gallery img" />
+        </div>
+        <div class="gallery-item shadow image-wrapper">
+          <img src="images/gallery 7.jpg" alt="gallery img" />
+        </div>
+        <div class="gallery-item shadow image-wrapper">
+          <img src="images/gallery 8.jpg" alt="gallery img" />
+        </div>
+        <div class="gallery-item shadow image-wrapper">
+          <img src="images/gallery 9.jpg" alt="gallery img" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of gallery section -->
+
+  <!-- img modal -->
+  <div id="img-modal-box">
+    <div id="img-modal">
+      <button type="button" id="modal-close-btn" class="flex">
+        <i class="fas fa-times"></i>
+      </button>
+      <button type="button" id="prev-btn" class="flex">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button type="button" id="next-btn" class="flex">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <img src="images/20211107_115829.jpg" />
+    </div>
+  </div>
+  <!-- end of img modal -->
+
+  <!-- popular places section -->
+  <section id="popular" class="py-4">
+    <div class="title-wrap">
+      <span class="sm-title">know about some cool destination</span>
+      <h2 class="lg-title">Popular Places</h2>
+    </div>
+
+    <div class="popular-row">
+      <div class="popular-item shadow">
+        <img src="images/popular 1.jpg" alt="" />
+        <div>
+          <span>Sonmarg, Srinagar</span>
+          <ul class="rating flex">
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star-half-alt"></i></li>
+            <li>&nbsp;450 reviews</li>
+          </ul>
+          <p class="text">
+            The spot in Srinagar most people go with their families and friends.
+            A heart full of snow and endless activities will undoubtedly calm you down.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="popular-item shadow">
+        <img src="images/popular 2.jpg" alt="" />
+        <div>
+          <span>Khajjiar, Dalhousie</span>
+          <ul class="rating flex">
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star-half-alt"></i></li>
+            <li>&nbsp;300 reviews</li>
+          </ul>
+          <p class="text">
+            There is nothing more exquisite than Khajjiar. A sizable open space featuring a plethora of family-friendly
+            activities will transport you back to Switzerland.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="popular-item shadow">
+        <img src="images/popular 3.jpg" alt="" />
+        <div>
+          <span>Rohtan Pass, Manali</span>
+          <ul class="rating flex">
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star-half-alt"></i></li>
+            <li>&nbsp;400 reviews</li>
+          </ul>
+          <p class="text">
+            It's a wonderful pleasure to enjoy the outdoors with friends during bitterly cold and snowy conditions, and
+            Rohtang Pass offers just that.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="popular-item shadow">
+        <img src="images/popular 4.jpg" alt="" />
+        <div>
+          <span>Jogini Fall, Manali</span>
+          <ul class="rating flex">
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star-half-alt"></i></li>
+            <li>&nbsp;200 reviews</li>
+          </ul>
+          <p class="text">
+            In the mountains, an adventure would not be the same without trekking. The Jogini track offers you a
+            breathtaking view of the earth's splendor from space. With Jogini Maa's grace, enjoy tracking.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="popular-item shadow">
+        <img src="images/popular 5.jpg" alt="" />
+        <div>
+          <span>Sach Pass, Dalhousie</span>
+          <ul class="rating flex">
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star-half-alt"></i></li>
+            <li>&nbsp;200 reviews</li>
+          </ul>
+          <p class="text">
+            The Sach Pass in Dalhousie offers a great experience because it passes through enormous mountains, forests,
+            and even open spaces.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="popular-item shadow">
+        <img src="images/popular 6.jpg" alt="" />
+        <div>
+          <span>Pangong TSO, Leh-Ladakh</span>
+          <ul class="rating flex">
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star-half-alt"></i></li>
+            <li>&nbsp;700 reviews</li>
+          </ul>
+          <p class="text">
+            One of India's largest and purest lakes, Pangong Lake is located near the border between China and India.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="popular-item shadow">
+        <img src="images/popular 7.jpg" alt="" />
+        <div>
+          <span>Nubra Valley, Leh-Ladakh</span>
+          <ul class="rating flex">
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star-half-alt"></i></li>
+            <li>&nbsp;400 reviews</li>
+          </ul>
+          <p class="text">
+            God's actual creation, Nubra Valley, is composed of mountains, a desert, waterfalls, snow on the summit, and
+            verdant trees.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="popular-item shadow">
+        <img src="images/popular 8.jpg" alt="" />
+        <div>
+          <span>Shimla</span>
+          <ul class="rating flex">
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star-half-alt"></i></li>
+            <li>&nbsp;400 reviews</li>
+          </ul>
+          <p class="text">
+            While using a train is enjoyable, taking a mountain train to Shimla is truly remarkable.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of popular places section -->
+
+  <!-- footer -->
+  <footer class="py-4">
+    <div class="container footer-row">
+      <div class="footer-item">
+        <a href="index.html" class="site-brand">
+          <span>Himalaya</span> Adventure and <span>Activity</span> Camp
+        </a>
+        <p class="text">An organization run by travel expertise with an experience of ever the 15 years along
+          with many great achievements.</p>
+
+      </div>
+
+      <div class="footer-item">
+        <h2>Follow us on: </h2>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.facebook.com/drharshad.solanki.7/">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/himalaya_adventurecamp/">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.google.com/maps/place/Himalaya+Adventure+Activity+Camp/@23.0020117,72.5167045,17z/data=!3m1!4b1!4m5!3m4!1s0x395e9b2258fa84e5:0xf9521a51cb7495c9!8m2!3d23.0020117!4d72.5167045">
+              <i class="fab fa-google"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-item">
+        <h2>Popular Places:</h2>
+        <ul>
+          <li><a href="packages/manali.html">Manali</a></li>
+          <li><a href="packages/lehladakh.html">Leh-Ladakh</a></li>
+          <li><a href="packages/srinagar.html">Srinagar</a></li>
+          <li><a href="packages/dalhousie.html">Dalhousie</a></li>
+          <li><a href="packages/shimla.html">Shimla</a></li>
+          <li><a href="packages/nainital.html">Nainital</a></li>
+        </ul>
+      </div>
+
+      <!-- <div class="subscribe-form footer-item">
+              <h2>Subscribe for Newsletter!</h2>
+              <form class="flex">
+                  <input type="email" placeholder="Enter Email" class="form-control">
+                  <input type="submit" class="btn" value="Subscribe">
+              </form>
+          </div> -->
+
+      <div class="footer-item">
+        <h2>Phone: </h2>
+        <!-- <p>(+91) 9426465032</p>
+            <p>(+91) 9376134035</p> -->
+        <a href="tel:(+91) 9426465032"><i class="fas fa-mobile-alt"></i> (+91) 9376134035</a><br>
+        <a href="tel:(+91) 9376134035"><i class="fas fa-mobile-alt"></i> (+91) 9426465032</a>
+
+        <h2>Email: </h2>
+        <!-- <p>drharshadsolanki@gmail.com</p> -->
+        <a href="mailto: drharshadsolanki@gmail.com?subject = Contact Me&body = Message"><i class="fas fa-at"></i>
+          drharshadsolanki@gmail.com</a>
+
+      </div>
+    </div>
+  </footer>
+  <!-- end of footer -->
+
+  <!-- js -->
+  <script src="js/script.js"></script>
+  <script>
+    var images = document.getElementsByClassName("image-wrapper");
+    for (var i = 0; i < images.length; i++) {
+      images[i].onclick = function () {
+        window.open(this.firstElementChild.src, "_blank", "fullscreen=yes");
+      }
+    };
+  </script>
+</body>
+
+</html>

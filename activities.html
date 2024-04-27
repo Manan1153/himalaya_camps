@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Himalayacamps</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="font/fonts.css">
+    <!-- normalize css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    
+    <!-- navbar  -->
+     <nav class="navbar smaller-navbar">
+      <div class="container flex">
+        <a href="index.html" class="site-brand">
+          <span>Himalaya</span> Adventure and <span>Activity</span> Camp
+        </a>
+
+        <button type="button" id="navbar-show-btn" class="flex">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div id="navbar-collapse">
+          <button type="button" id="navbar-close-btn" class="flex">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="gallery.html" class="nav-link">Gallery</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="activities.html" class="nav-link">Activities</a>
+            </li> -->
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="packages.html" class="nav-link">Packages</a>
+              </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end of navbar  -->
+
+    <!-- header -->
+    <header class="flex header-sm">
+        <div class="container">
+            <div class="header-title">
+                <h1>Activities</h1>
+                <p><span>Check out the activities we organize everyday.</span><br> We schedule different types of
+                    activities like physical activites and mental acitivites. </p>
+            </div>
+        </div>
+    </header>
+    <!-- header -->
+
+    <section id="activites" class="py-4" style="background-image: linear-gradient(to left, #bdc3c7, #2c3e50);">
+        <div class="container">
+            <div class="title-wrap">
+                <h2 class="sm-title">Have a look at the information below</h2>
+                <!-- <h3 class="lg-title">Physical Activites</h3> -->
+            </div>
+
+            <div class="physical-activites" id="physical-activites">
+                <div class="act">
+                    <h3>River Crossing : </h3>
+                    <section id="video">
+                        <div class="video-wrapper flex">
+                            <video loop id="vid1">
+                                <source src="videos/river crossing2.mp4" type="video/mp4">
+                            </video>
+                            <button type="button" id="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </section>
+                </div>
+                <br>
+                <br>
+                <div class="act">
+                    <h3>River Rafting : </h3>
+                    <section id="video2">
+                        <div class="video-wrapper flex">
+                            <video loop id="vid2">
+                                <source src="videos/rafting.MP4" type="video/mp4">
+                            </video>
+                            <button type="button" id="play-btn2">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </section>
+                </div>
+                <br><br>
+
+
+                <div class="images">
+                    <div class="act">
+                        <h3>Solang Valley </h3>
+                        <div class="image-wrapper flex">
+                            <img id="image1" src="images/activites/solang valley.jpg" style="height: 500px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="images">
+                    <div class="act">
+                        <h3>Atal Tunnel </h3>
+                        <div class="image-wrapper flex">
+                            <img id="image1" src="images/activites/atal.jpg" style="height: 500px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex;">
+                    <div class="images">
+                        <div class="act">
+                            <h3>Hotel (Manali) </h3>
+                            <div class="image-wrapper flex">
+                                <img id="image1" src="images/activites/hotel.jpg" style="height: 500px; width: 600px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="images" style=" margin-left: 10%;">
+                        <div class="act">
+                            <h3>Hotel (Manali) </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/hotel2.jpg"
+                                    style="height: 500px; width: 600px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div style="display: flex;">
+                    <div class="images">
+                        <div class="act">
+                            <h3>Fun Activities on River Biyas </h3>
+                            <div class="image-wrapper flex">
+                                <img id="image1" src="images/activites/biyas.jpg" style="height: 500px; width: 600px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="images" style=" margin-left: 10%;">
+                        <div class="act">
+                            <h3>Rohtan Pass </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/rohtang.jpg"
+                                    style="height: 500px; width: 600px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div style="display: flex;">
+                    <div class="images">
+                        <div class="act">
+                            <h3>Dal Lake </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/lake.jpg" style="height: 500px; width:600px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="images" style=" margin-left: 10%;">
+                        <div class="act">
+                            <h3>Dal Lake - Shikara </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/shikara.jpg"
+                                    style="height: 500px; width: 600px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div style="display: flex;">
+                    <div class="images">
+                        <div class="act">
+                            <h3>Satchu Camp Site </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/sarchu.jpg" style="height: 500px; width: 600px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="images" style=" margin-left: 10%;">
+                        <div class="act">
+                            <h3>Kargil War Memorial </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/kargil.jpg" style="height: 500px; width:600px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <div style="display: flex;">
+                    <div class="images">
+                        <div class="act">
+                            <h3>Group </h3>
+                            <div class="image-wrapper flex">
+                                <img id="image1" src="images/activites/group1.jpg" style="height: 500px; width: 600px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="images" style=" margin-left: 10%;">
+                        <div class="act">
+                            <h3>Group </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/group2.jpg"
+                                    style="height: 500px; width: 600px;">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="images">
+                    <div class="act">
+                        <h3>Group </h3>
+                        <div class="image-wrapper flex">
+                            <img id="image1" src="images/activites/group1.jpg" style="height: 500px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="images">
+                    <div class="act">
+                        <h3>Group </h3>
+                        <div class="image-wrapper flex">
+                            <img id="image1" src="images/activites/group2.jpg" style="height: 500px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex;">
+                    <div class="images">
+                        <div class="act">
+                            <h3>Boat House - Srinagar </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/boatHouse.jpg" style="height: 500px; width: 600px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="images" style=" margin-left: 10%;">
+                        <div class="act">
+                            <h3>Boat House - Srinagar </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/boatHouse2.jpg" style="height: 500px; width:600px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex;">
+                    <div class="images">
+                        <div class="act">
+                            <h3>Jogini Fall Trekking
+                                 </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/trekking.jpg" style="height: 500px; width: 600px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="images" style=" margin-left: 10%;">
+                        <div class="act">
+                            <h3>Trekking </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/trekking2.jpg" style="height: 500px; width:600px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="images">
+                    <div class="act">
+                        <h3>Manali Local - Market </h3>
+                        <div class="image-wrapper flex">
+                            <img id="image1" src="images/activites/manali_local.jpg" style="height: 500px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex;">
+                    <div class="images">
+                        <div class="act">
+                            <h3>Manali River Side Hotel
+                                 </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/manali-view.jpg" style="height: 500px; width: 600px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="images" style=" margin-left: 10%;">
+                        <div class="act">
+                            <h3>Manali Tent House </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/manali-view2.jpg" style="height: 500px; width:600px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div style="display: flex;">
+                    <div class="images">
+                        <div class="act">
+                            <h3>Atal Pass
+                                 </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/atalPass.jpg" style="height: 500px; width: 600px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="images" style=" margin-left: 10%;">
+                        <div class="act">
+                            <h3>Leh Ladakh Local </h3>
+                            <div class="image-wrapper2">
+                                <img id="image1" src="images/activites/leh-local.jpg" style="height: 500px; width:600px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!-- footer -->
+    <footer class="py-4">
+        <div class="container footer-row">
+            <div class="footer-item">
+                <a href="index.html" class="site-brand">
+                    <span>Himalaya</span> Adventure and <span>Activity</span> Camp
+                </a>
+                <p class="text">An organization run by travel expertise with an experience of ever the 15 years along
+                    with many great achievements.</p>
+            
+            </div>
+
+            <div class="footer-item">
+                <h2>Follow us on: </h2>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://www.facebook.com/drharshad.solanki.7/">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/himalaya_adventurecamp/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                  
+                    <li>
+                        <a
+                            href="https://www.google.com/maps/place/Himalaya+Adventure+Activity+Camp/@23.0020117,72.5167045,17z/data=!3m1!4b1!4m5!3m4!1s0x395e9b2258fa84e5:0xf9521a51cb7495c9!8m2!3d23.0020117!4d72.5167045">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-item">
+                <h2>Popular Places:</h2>
+                <ul>
+                    <li><a href="packages/manali.html">Manali</a></li>
+                    <li><a href="packages/lehladakh.html">Leh-Ladakh</a></li>
+                    <li><a href="packages/srinagar.html">Srinagar</a></li>
+                    <li><a href="packages/dalhousie.html">Dalhousie</a></li>
+                    <li><a href="packages/shimla.html">Shimla</a></li>
+                    <li><a href="packages/nainital.html">Nainital</a></li>
+                </ul>
+            </div>
+
+            <!-- <div class="subscribe-form footer-item">
+                <h2>Subscribe for Newsletter!</h2>
+                <form class="flex">
+                    <input type="email" placeholder="Enter Email" class="form-control">
+                    <input type="submit" class="btn" value="Subscribe">
+                </form>
+            </div> -->
+
+            <div class="footer-item">
+                <h2>Phone: </h2>
+                <!-- <p>(+91) 9426465032</p>
+                <p>(+91) 9376134035</p> -->
+                <a href="tel:(+91) 9426465032"><i class="fas fa-mobile-alt"></i>  (+91) 9376134035</a><br>
+                <a href="tel:(+91) 9376134035"><i class="fas fa-mobile-alt"></i>  (+91) 9426465032</a>
+                
+                <h2>Email: </h2>
+                <!-- <p>drharshadsolanki@gmail.com</p> -->
+                <a href="mailto: drharshadsolanki@gmail.com?subject = Contact Me&body = Message" ><i class="fas fa-at"></i> drharshadsolanki@gmail.com</a>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- js -->
+    <script src="js/script.js"></script>
+    <script>
+        //full size image
+        // var img = document.getElementById("image1");
+        // img.onclick = function () {
+        //     window.open(this.src, "_blank", "fullscreen=yes");
+        // };
+        // var img = document.getElementById("image2");
+        // img.onclick = function () {
+        //     window.open(this.src, "_blank", "fullscreen=yes");
+        // };
+
+        var images = document.getElementsByClassName("image-wrapper");
+    for (var i = 0; i < images.length; i++) {
+        images[i].onclick = function () {
+        window.open(this.firstElementChild.src, "_blank", "fullscreen=yes");
+    };
+}
+
+
+        // play/pause video
+        document.getElementById('play-btn').addEventListener('click', () => {
+            let video = document.getElementById('vid1');
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+        document.getElementById('play-btn2').addEventListener('click', () => {
+            let video = document.getElementById('vid2');
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    </script>
+</body>
+
+</html>

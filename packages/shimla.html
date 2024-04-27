@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Himalayacamps</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- font awesome cdn -->
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        referrerpolicy="no-referrer" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" type="text/css" /><!-- fonts -->
+    <link href="../font/fonts.css" rel="stylesheet" /><!-- normalize css -->
+    <link href="css/normalize.css" rel="stylesheet" /><!-- custom css -->
+    <link href="css/utility.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/responsive.css" rel="stylesheet" />
+
+    <style>
+        /* Add CSS styles here */
+
+        header {
+            min-height: 85vh;
+            padding-top: 7rem;
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/shimla/Shimla2.jpg) center/cover no-repeat;
+            background: -o-linear-gradient((rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/shimla/Shimla2.jpg) center/cover no-repeat;
+            background: linear-gradient((rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/shimla/Shimla2.jpg) center/cover no-repeat;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        #heading {
+            color: white;
+        }
+
+        #heading2 {
+            color: white;
+            font-size: large;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image {
+            width: 430px;
+            height: 250px;
+            margin: 15px;
+            border: 2px solid #ccc;
+            border-radius: 9px;
+            overflow: hidden;
+
+        }
+
+        .image img {
+            max-width: 101%;
+            max-height: 100%;
+            /* object-fit: cover; */
+            object-fit: fill;
+        }
+
+
+        h3 {
+            text-align: center;
+            color: rgb(2, 17, 47);
+            /* background-color: rgb(246, 222, 192); */
+        }
+
+        .imagesSection {
+            /* background-color: white; */
+            background: linear-gradient(to bottom, rgba(173, 216, 230, 0.4), rgba(255, 255, 255, 0.4));
+            /* background: url("gif2.gif") center/cover no-repeat; */
+        }
+
+        .image {
+            transition: transform 0.3s;
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .lightbox-content {
+            display: block;
+            margin: 0 auto;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 35px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                /* optional */
+            }
+
+            .image {
+                width: 40%;
+                /* Adjust width as needed */
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- <nav class="navbar">
+        <div class="container flex">
+          <a href="../index.html" class="site-brand">
+            <span>Himalaya</span> Adventure and <span>Activity</span> Camp
+          </a>
+  
+          <button type="button" id="navbar-show-btn" class="flex">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div id="navbar-collapse">
+            <button type="button" id="navbar-close-btn" class="flex">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link"></a>
+              </li>
+              <li class="nav-item">
+                <a href="../gallery.html" class="nav-link">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a href="../activities.html" class="nav-link">Activities</a>
+              </li>
+              <li class="nav-item">
+                <a href="../about.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="../contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> -->
+    <!-- end of navbar  -->
+
+
+    <header class="flex header-sm">
+        <div class="container">
+            <div class="header-title">
+                <h1>Shimla - Manali</h1>
+                <h2>"Shimla is where tranquilty meets adventure."</h1>
+                    <!-- <p>Spread across seven hills in the northwest Himalayas among lush valleys and forests of oak,
+                        rhododendron and pine is the capital of Himachal Pradesh that was once the summer capital of
+                        colonial India. And today, there is still more than a hint of the Raj in the former hill station
+                        of Shimla.</p> -->
+            </div>
+        </div>
+    </header>
+    <br>
+
+    <!-- <div class="packages-item">
+
+        <br>
+        <ul class="package-included">
+            <li>Shimla Local Sightseeing - Kufri, Green Valley, Jakhu Temple</li>
+            <li>Christ Church, The Ridge, The Mall</li>
+            <li>Manali Local Sightseeing - Manu Temple, Hidimba Temple</li>
+            <li>Rohtang Pass</li>
+            <li>Solang Valley</li>
+            <li>Atal Tunnel</li>
+        </ul>
+        <br>
+
+    </div> -->
+
+    <section class="imagesSection">
+        <h2 style="text-align: center; color: #fe5825;">Shimla :-</h2>
+        <div class="image-container">
+            <div class="image image-wrapper3 gallery-item shadow">
+                <h3>Kufri</h3>
+                <img src="../images/shimla/kufri.jpeg" height="250px" width="430px" alt="Image 1"
+                    onclick="openLightbox('../images/shimla/kufri.jepg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Jhakhu Temple</h3>
+                <img src="../images/shimla/jhakhu temple.jpg" height="250px" width="430px" alt="Image 2"
+                    onclick="openLightbox('../images/shimla/jhakhu temple.jpg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Christ Church</h3>
+                <img src="../images/shimla/christ church.jpeg" height="250px" width="430px" alt="Image 2"
+                    onclick="openLightbox('../images/shimla/christ church.jpeg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>The Ridge</h3>
+                <img src="../images/shimla/the ridge.jpeg" height="250px" width="430px" alt="Image 3"
+                    onclick="openLightbox('../images/shimla/the ridge.jpeg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>The Mall</h3>
+                <img src="../images/shimla/the mall.jpeg" height="250px" width="430px" alt="Image 3"
+                    onclick="openLightbox('../images/shimla/the mall.jpeg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Green Valley</h3>
+                <img src="../images/shimla/green valley.jpg" height="250px" width="430px" alt="Image 3"
+                    onclick="openLightbox('../images/shimla/green valley.jpg')" />
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+        
+        <h2 style="text-align: center; color: #fe5825;">Manali :-</h2>
+
+        <div class="image-container">
+            <div class="image image-wrapper3 gallery-item shadow">
+                <h3>River Crossing</h3>
+                <img src="../images/manali/rivercrossing.jpg" height="250px" width="430px" alt="Image 1" onclick="openLightbox('../images/manali/rivercrossing.jpg')"/>
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Rock Climbing</h3>
+                <img src="../images/manali/rock climbing.jpg" height="250px" width="430px" alt="Image 2" onclick="openLightbox('../images/manali/rock climbing.jpg')"/>
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Meditation in Jungle</h3>
+                <img src="../images/manali/meditation.jpg" height="250px" width="430px" alt="Image 2" onclick="openLightbox('../images/manali/meditation.jpg')"/>
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Jogini Falls Treck</h3>
+                <img src="../images/manali/jogini.jpg" height="250px" width="430px" alt="Image 3" onclick="openLightbox('../images/manali/jogini.jpg')"/>
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Rohtang Pass</h3>
+                <img src="../images/manali/rohtang.jpeg" height="250px" width="430px" alt="Image 3" onclick="openLightbox('../images/manali/rohtang.jpeg')"/>
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Solang Valley</h3>
+                <img src="../images/manali/solang.jpeg" height="250px" width="430px" alt="Image 3" onclick="openLightbox('../images/manali/solang.jpeg')"/>
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Atal Tunnel</h3>
+                <img src="../images/manali/atal.jpeg" height="250px" width="430px" alt="Image 3" onclick="openLightbox('../images/manali/atal.jpeg')"/>
+            </div>
+            <div class="image image-wrapper3">
+                <h3>River Rafting</h3>
+                <img src="../images/manali/rafting.jpg" height="250px" width="430px" alt="Image 3" onclick="openLightbox('../images/manali/rafting.jpg')"/>
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Paragliding</h3>
+                <img src="../images/manali/paragliding.jpeg" height="250px" width="430px" alt="Image 3" onclick="openLightbox('../images/manali/paragliding.jpeg')"/>
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <button id="backButton">Go Back</button>
+    <script src="../js/lightbox.js"></script>
+
+
+
+    <script src="../js/lightbox.js"></script>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-button" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-image" class="lightbox-content" src="" alt="Image">
+    </div>
+
+</body>
+
+</html>

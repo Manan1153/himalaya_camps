@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Himalayacamps</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- font awesome cdn -->
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        referrerpolicy="no-referrer" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" type="text/css" /><!-- fonts -->
+    <link href="../font/fonts.css" rel="stylesheet" /><!-- normalize css -->
+    <link href="css/normalize.css" rel="stylesheet" /><!-- custom css -->
+    <link href="css/utility.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/responsive.css" rel="stylesheet" />
+    <style type="text/css">
+        /* Add CSS styles here */
+
+        header {
+            min-height: 85vh;
+            padding-top: 7rem;
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/manali/manali.jpg) center/cover no-repeat;
+            background: -o-linear-gradient((rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/manali/manali.jpg) center/cover no-repeat;
+            background: linear-gradient((rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/manali/manali.jpg) center/cover no-repeat;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        #heading {
+            color: white;
+        }
+
+        #heading2 {
+            color: white;
+            font-size: large;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image {
+            width: 430px;
+            height: 250px;
+            margin: 15px;
+            border: 2px solid #ccc;
+            border-radius: 9px;
+            overflow: hidden;
+
+        }
+
+        .image img {
+            max-width: 101%;
+            max-height: 100%;
+            /* object-fit: cover; */
+            object-fit: fill;
+        }
+
+
+        h3 {
+            text-align: center;
+            color: rgb(2, 17, 47);
+            /* background-color: rgb(246, 222, 192); */
+        }
+
+        .imagesSection {
+            /* background-color: white; */
+            background: linear-gradient(to bottom, rgba(173, 216, 230, 0.4), rgba(255, 255, 255, 0.4));
+            /* background: url("gif2.gif") center/cover no-repeat; */
+        }
+
+        .image {
+            transition: transform 0.3s;
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .lightbox-content {
+            display: block;
+            margin: 0 auto;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 35px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                /* optional */
+            }
+
+            .image {
+                width: 40%;
+                /* Adjust width as needed */
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body data-gr-ext-installed="" data-new-gr-c-s-check-loaded="14.1155.0">
+    <header class="flex header-sm">
+        <div class="container">
+            <div class="header-title">
+                <h1 id="header">Manali</h1>
+
+                <h2 id="heading">&quot;Where dreams and nature interwine&quot;</h2>
+
+                <!-- <p id="heading2">Manali is a town, near Kullu town in Kullu district in the state of Himachal Pradesh. It is situated
+                    in the northern end of the Kullu Valley, formed by the Beas River.</p> -->
+            </div>
+        </div>
+    </header>
+
+    <p></p>
+
+    <section class="imagesSection">
+        <div class="image-container">
+            <div class="image image-wrapper3 gallery-item shadow">
+                <h3>River Crossing</h3>
+                <img alt="Image 1" height="250px" onclick="openLightbox('../images/manali/rivercrossing.jpg')"
+                    src="../images/manali/rivercrossing.jpg" width="430px" />
+            </div>
+
+            <div class="image image-wrapper3">
+                <h3>Rock Climbing</h3>
+                <img alt="Image 2" height="250px" onclick="openLightbox('../images/manali/rock climbing.jpg')"
+                    src="../images/manali/rock climbing.jpg" width="430px" />
+            </div>
+
+            <div class="image image-wrapper3">
+                <h3>Meditation in Jungle</h3>
+                <img alt="Image 2" height="250px" onclick="openLightbox('../images/manali/meditation.jpg')"
+                    src="../images/manali/meditation.jpg" width="430px" />
+            </div>
+
+            <div class="image image-wrapper3">
+                <h3>Jogini Falls Treck</h3>
+                <img alt="Image 3" height="250px" onclick="openLightbox('../images/manali/jogini.jpg')"
+                    src="../images/manali/jogini.jpg" width="430px" />
+            </div>
+
+            <div class="image image-wrapper3">
+                <h3>Rohtang Pass</h3>
+                <img alt="Image 3" height="250px" onclick="openLightbox('../images/manali/rohtang.jpeg')"
+                    src="../images/manali/rohtang.jpeg" width="430px" />
+            </div>
+
+            <div class="image image-wrapper3">
+                <h3>Solang Valley</h3>
+                <img alt="Image 3" height="250px" onclick="openLightbox('../images/manali/solang.jpeg')"
+                    src="../images/manali/solang.jpeg" width="430px" />
+            </div>
+
+            <div class="image image-wrapper3">
+                <h3>Atal Tunnel</h3>
+                <img alt="Image 3" height="250px" onclick="openLightbox('../images/manali/atal.jpeg')"
+                    src="../images/manali/atal.jpeg" width="430px" />
+            </div>
+
+            <div class="image image-wrapper3">
+                <h3>River Rafting</h3>
+                <img alt="Image 3" height="250px" onclick="openLightbox('../images/manali/rafting.jpg')"
+                    src="../images/manali/rafting.jpg" width="430px" />
+            </div>
+
+            <div class="image image-wrapper3">
+                <h3>Paragliding</h3>
+                <img alt="Image 3" height="250px" onclick="openLightbox('../images/manali/paragliding.jpeg')"
+                    src="../images/manali/paragliding.jpeg" width="430px" />
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!--ITINERARY-->
+    <style type="text/css">
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hh1 {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            margin-bottom: 1em;
+
+        }
+
+        section {
+            padding: 1em;
+            margin-bottom: 1.5em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .pp1 {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .highlight {
+            color: rgb(109, 109, 109);
+            font-weight: 500;
+        }
+        
+        .highlights{
+            color: rgb(99, 99, 99);
+            font-weight: 700;
+            /* font-size: 18px; */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+        }
+
+        th,
+        td {
+            padding: 0.5em;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <p></p>
+
+    <h1 class="hh1">Amazing Travel Package</h1>
+
+    <section id="destination">
+        <h2 class="title">Destination: <span class="highlights">Manali</span></h2>
+    </section>
+
+    <section id="itinerary">
+        <h2 class="title">Itinerary</h2>
+
+        <p class="pp1"><span class="highlights">Day 1: </span> Train departure at from Ahmedabad Sabarmati Railway
+            Station, with a third AC reservation, headed for Chandigarh<br />
+            <br />
+            <span class="highlights">Day 2: </span> Train arrives in Chandigarh at, followed by a bus ride to Manali. A
+            two-hour break is taken for river rafting at Kullu. Hotel check-in at the Manali River Bank. See the Hidimba
+            Temple in the evening, then have dinner and an enlightening campfire discussion about the plans for the next
+            six days.<br />
+            <br />
+            <span class="highlights">Day 3: </span> Yoga and pranayama in the morning, brunch, a trip to the Manu Temple,
+            a trip to Oxygen Park, a walk down Mall Road, a hotel lunch followed by a river crossing, supper, and a
+            campfire in the evening.<br />
+            <br />
+            <span class="highlights">Day 4: </span> Morning exercise, breakfast, trekking to Jogini fall, Visit to
+            Vashisht Ashram, bathing in hot springs, afternoon return to the hotel for lunch, shopping on Mall Road, and
+            campfire in the evening.<br />
+            <br />
+            <span class="highlights">Day 5: </span> Morning exercise, have a blast in the snow at Atal Tunnel,
+            children&#39;s water park and waterfall in Shishu and then head over to Jispa camping grounds for a night
+            stay in tents surrounded by mountains. Dinner by the river and a DJ party.<br />
+            <br />
+            <span class="highlights">Day 6: </span> Morning breakfast, Take a ride down Leh Ladakh national highway
+            towards Solang Valley with a beautiful mesmerizing mountain view for about 100 km. Enjoy activities at
+            Solang Valley such as- horse riding, zorbing, Paragliding, Gondola and evening campfire or DJ party.<br />
+            <br />
+            <span class="highlights">Day 7: </span> Start the day with a workout, grab breakfast, and if we missed it on
+            the first day, hit up the Kullu-Manali rafting. Later in the day, hop on a bus headed for Chandigarh and get
+            on a Train to way back to Ahmedabad.<br />
+            <br />
+            <span class="highlights">Day 8: </span> Return to Ahmedabad by late evening.
+        </p>
+    </section>
+
+    <section id="accommodation">
+        <h2 class="title">Accommodation: <span class="highlights">Hotel Riverbank</span></h2>
+
+        <p class="pp1">Indulge in the comfort of our exclusive hotel with breathtaking views, top-notch amenities, and
+            an extra-ordinary service.</p>
+    </section>
+    <!-- <section id="pricing">
+        <h2>Pricing</h2>
+        <p class="pp1">Package Cost: <span class="highlight">$2000</span></p>
+        <p class="pp1">Inclusions: Flights, Accommodation, Meals, Excursions</p>
+    </section> -->
+
+    <section id="camp-charges">
+        <h1 class="hh1">Pricing</h1>
+
+        <table>
+            <tbody>
+                <tr>
+                    <th><span class="highlightss">With 3AC Railway Tickets</span></th>
+                    <th><span class="highlights">Details</span></th>
+                </tr>
+                <tr>
+                    <td>Booking Requires an Advance Payment</td>
+                    <td>Rs. 10,000/-</td>
+                </tr>
+                <tr>
+                    <td>Student Fees</td>
+                    <td>Rs. 14,500/-</td>
+                </tr>
+                <tr>
+                    <td>Family (per person) Fees</td>
+                    <td>Rs. 16,500/-</td>
+                </tr>
+                <tr>
+                    <th><span class="highlights">With Flight (Ahmedabad to Delhi &amp; Return)</span></th>
+                    <th><span class="highlights">Details</span></th>
+                </tr>
+                <tr>
+                    <td>Total Charges</td>
+                    <td>Rs. 24,500/-</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="activities">
+        <h1 class="hh1">Adventure Activities in Manali</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th><span class="highlights">Activites</span></th>
+                    <th><span class="highlights">Details</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>River Crossing</td>
+                    <td>Included</td>
+                </tr>
+                <tr>
+                    <td>River Rafting</td>
+                    <td>Cost Not Included</td>
+                </tr>
+                <tr>
+                    <td>Campfire</td>
+                    <td>Included</td>
+                </tr>
+                <tr>
+                    <td>Trekking</td>
+                    <td>Included</td>
+                </tr>
+                <tr>
+                    <td>Horse riding</td>
+                    <td>Cost Not Included</td>
+                </tr>
+                <tr>
+                    <td>Snow Point</td>
+                    <td>Included</td>
+                </tr>
+                <tr>
+                    <td>Paragliding</td>
+                    <td>Cost Not Included</td>
+                </tr>
+                <tr>
+                    <td>Local Sightseeing</td>
+                    <td>Included</td>
+                </tr>
+                <tr>
+                    <td>River Rafting</td>
+                    <td>Cost Not Included</td>
+                </tr>
+                <tr>
+                    <td>Camping in Tents</td>
+                    <td>Included</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #3498db;
+        }
+        h2 {
+            color: #2ecc71;
+        }
+        p {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+
+        .title{
+            color: black;
+            font-weight: 700;
+            font-size: 1.7rem;
+        }
+    </style>
+
+    <section id="camps">
+        <h1 class="hh1">Summer Camp Schedule</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th><span class="highlights">Week</span></th>
+                    <th><span class="highlights">Start Date</span></th>
+                    <th><span class="highlights">End Date</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>28/4/24</td>
+                    <td>5/5/24</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>04/5/24</td>
+                    <td>11/5/24</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>11/5/24</td>
+                    <td>18/5/24</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>17/5/24</td>
+                    <td>23/5/24</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>22/5/24</td>
+                    <td>29/5/24</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="information">
+        <h1 class="hh1">Himalaya Adventure Activity Camp</h1>
+
+        <table>
+            <tbody>
+                <tr>
+                    <th><span class="highlights">Details</span></th>
+                    <th><span class="highlights">Information</span></th>
+                </tr>
+                <tr>
+                    <td>Package Includes</td>
+                    <td>Accommodation, Food (Breakfast, Lunch, and Dinner), Transportation (Train and Bus), Adventure
+                        Activities</td>
+                </tr>
+                <tr>
+                    <td>Registration Deadline</td>
+                    <td>20/01/2024</td>
+                </tr>
+                <tr>
+                    <td>Contact Himalaya Adventure Activity Camp</td>
+                    <td>
+                        <ul>
+                            <li>Website: <a href="https://www.himalayacamps.com">Himalaya Adventure Activity Camp</a>
+                            </li>
+                            <li>Contact: Harshad Solanki +91 9376134035</li>
+                            <li>Email: <a href="mailto:drharshadsolanki@gmail.com">Drharshadsolanki@gmail.com</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Camp Charges (with 3AC Railway Tickets)</td>
+                    <td>
+                        <ul>
+                            <li>Booking Requires an Advance Payment of Rs. 10,000/-</li>
+                            <li>Student Fees: Rs. 14,500/-</li>
+                            <li>Family (per person) Fees: Rs. 16,500/-</li>
+                        </ul>
+                    </td>
+                </tr>
+                <!-- <tr>
+                <td>Charges with Flight (Ahmedabad to Delhi & Return)</td>
+                <td>Rs. 24,500/-</td>
+            </tr> --><!-- <tr>
+                <td>Bank Account Details</td>
+                <td>
+                    <ul>
+                        <li>Bank: Bank of Baroda, Jivraj Park, Ahmedabad</li>
+                        <li>Account Name: Himalaya Adventure & Yog Activity Camp</li>
+                        <li>Account Number: 46850200000078</li>
+                        <li>NEFT IFSC Code: BARB0JIVRAJ</li>
+                    </ul>
+                </td>
+            </tr> -->
+            </tbody>
+        </table>
+    </section>
+
+    <button id="backButton">Go Back</button>
+    <script src="../js/lightbox.js"></script>
+
+
+    <div class="lightbox" id="lightbox"><span class="close-button" onclick="closeLightbox()">&times;</span> <img
+            alt="Image" class="lightbox-content" id="lightbox-image" src="" /></div>
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>

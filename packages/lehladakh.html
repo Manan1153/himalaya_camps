@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Himalayacamps</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="../font/fonts.css" />
+    <!-- normalize css -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+
+    <style>
+        /* Add CSS styles here */
+
+        header {
+            min-height: 85vh;
+            padding-top: 7rem;
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/ladakh-2300904_1920.jpg) center/cover no-repeat;
+            background: -o-linear-gradient((rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/ladakh-2300904_1920.jpg) center/cover no-repeat;
+            background: linear-gradient((rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/ladakh-2300904_1920.jpg) center/cover no-repeat;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            color: whitesmoke;
+            text-align: center;
+        }
+
+
+        #heading {
+            color: white;
+        }
+
+        #heading2 {
+            color: white;
+            font-size: large;
+        }
+
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image {
+            width: 430px;
+            height: 250px;
+            margin: 15px;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .image img {
+            max-width: 100%;
+            max-height: 100%;
+            /* object-fit: cover; */
+            object-fit: fill;
+        }
+
+        h3 {
+            text-align: center;
+            color: rgb(2, 17, 47);
+            /* background-color: rgb(246, 222, 192); */
+        }
+
+        .imagesSection {
+            /* background-color: white; */
+            background: linear-gradient(to bottom, rgba(173, 216, 230, 0.4), rgba(255, 255, 255, 0.4));
+            /* background: url("gif2.gif") center/cover no-repeat; */
+        }
+
+        .image {
+            transition: transform 0.3s;
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        /* Add this CSS to your existing stylesheet */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .lightbox-content {
+            display: block;
+            margin: 0 auto;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 35px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                /* optional */
+            }
+
+            .image {
+                width: 40%;
+                /* Adjust width as needed */
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="flex header-sm">
+        <div class="container">
+            <div class="header-title">
+                <h1>Leh Ladakh</h1>
+                <h2 style="color: white;">“Leh Ladakh, where the beauty of nature takes center stage.”</h1>
+            </div>
+        </div>
+    </header>
+    <br>
+
+
+
+    <section class="imagesSection">
+        <div class="image-container">
+            <div class="image image-wrapper3 gallery-item shadow">
+                <h3>Nubra Valley</h3>
+                <img src="../images/leh/nubra.jpg" height="250px" width="430px" alt="Image 1"
+                    onclick="openLightbox('../images/leh/nubra.jpg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Pangong TSO</h3>
+                <img src="../images/leh/pangong.cms" height="250px" width="430px" alt="Image 2"
+                    onclick="openLightbox('../images/leh/pangong.cms')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Kargil</h3>
+                <img src="../images/leh/kargil.jpg" height="250px" width="430px" alt="Image 2"
+                    onclick="openLightbox('../images/leh/kargil.jpg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Khardungla Top</h3>
+                <img src="../images/leh/Khardung la.jpg" height="250px" width="430px" alt="Image 3"
+                    onclick="openLightbox('../images/leh/Khardung la.jpg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Snow Points</h3>
+                <img src="../images/leh/snow point ride.jpg" height="250px" width="430px" alt="Image 3"
+                    onclick="openLightbox('../images/leh/snow point ride.jpg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Shanti Stupa</h3>
+                <img src="../images/leh/shanti-stupta.jpg" height="250px" width="430px" alt="Image 3"
+                    onclick="openLightbox('../images/leh/shanti-stupta.jpg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Leh Palace</h3>
+                <img src="../images/leh/palace.jpeg" height="250px" width="430px" alt="Image 3"
+                    onclick="openLightbox('../images/leh/palace.jpeg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Shikara - Dal Lake</h3>
+                <img src="../images/leh/shikara.jpg" height="250px" width="430px" alt="Image 3"
+                    onclick="openLightbox('../images/leh/shikara.jpg')" />
+            </div>
+
+            <!-- Add more images as needed -->
+            <!-- Video container -->
+            <div class="image image-wrapper3">
+                <h3>Bara Lacha la pass (Video)</h3>
+                <video height="250px" width="430px" controls>
+                    <source src="../images/leh/snow view video.mp4" type="video/mp4" onclick="openLightbox('../images/leh/snow view video.mp4')" />>
+                    <!-- Add more <source> elements if needed for different video formats -->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+    </section>
+
+    <!--ITINERARY-->
+    <style type="text/css">
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hh1 {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            margin-bottom: 1em;
+
+        }
+
+        section {
+            padding: 1em;
+            margin-bottom: 1.5em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .pp1 {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .highlight {
+            color: rgb(109, 109, 109);
+            font-weight: 500;
+        }
+
+        .highlights {
+            color: rgb(99, 99, 99);
+            font-weight: 700;
+            /* font-size: 18px; */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+        }
+
+        th,
+        td {
+            padding: 0.5em;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+    <h1 class="hh1">Amazing Travel Package</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Details</th>
+                <th>Night Stay</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>27/05/2024</td>
+                <td>Ahmedabad to Jammu by Indigo 6E66687. Flight departure at 8:05 from Sardar Patel airport.<br>Jammu
+                    to Srinagar by road travel and arrives in Srinagar at 2:50.</td>
+                <td>Curios Allseams Hotel, Srinagar</td>
+            </tr>
+            <tr>
+                <td>28/05/2024</td>
+                <td>Srinagar local sightseeing. Included the Mughal Garden, Cheshma Shahi, Sri Shankaracharya mandir,
+                    Tulip Garden, Charar-e-Sharief shrine, Shikara ride in Dal Lake, and Lal Chowk market.</td>
+                <td>Curios Allseams Hotel, Srinagar</td>
+            </tr>
+            <!-- Add other rows similarly -->
+            <tr>
+                <td>29/05/2024</td>
+                <td>Depart to Sonmarg at 8 am, and follow up the journey by going to the Zojila pass, and then visit the
+                    Kargil war memorial, and spend the night in Zojila Hotel located in Kargil.</td>
+                <td>B. Zojila Hotel, Kargil</td>
+            </tr>
+            <tr>
+                <td>30/05/2024</td>
+                <td>Resume your journey towards Leh at 8 am, witness the colourful mountains, and Magnetic hill, and
+                    visit Baba Kharak Singh Gurudwara.</td>
+                <td>Rockcastle Residency, Leh</td>
+            </tr>
+            <tr>
+                <td>31/05/2024</td>
+                <td>Visit the world's highest motorable road, Khardung La, at 18380 ft. Go to Nubra Valley to witness
+                    the mesmerizing mountains, desert, river, camel safari, and campfire at night.</td>
+                <td>Hotel Siachen Nubra, Nubra Valley</td>
+            </tr>
+            <tr>
+                <td>01/06/2024</td>
+                <td>Visit the Pangong Lake going through the Siacheng glaciers situated between the Indo-China border.
+                    Enjoy Pangong Lake for 3 hours and return to the hotel at Leh. </td>
+                <td>Rockcastle Residency, Leh</td>
+            </tr>
+            <tr>
+                <td>02/06/2024 </td>
+                <td>Leh local sightseeing, which includes, Leh monastery, Rancho school (school from 3 Idiots movie),
+                    Leh Palace, Army museum, local market (Maal Road) </td>
+                <td>Rockcastle Residency, Leh</td>
+            </tr>
+            <tr>
+                <td>03/06/2024 </td>
+                <td>Head to the Sarchu, Bara Lacha la pass, night stay at Jispa, and continue the journey in between the
+                    mountains full of snow. </td>
+                <td>Jispa Tent sight, Jispa</td>
+            </tr>
+            <tr>
+                <td>04/06/2024</td>
+                <td>Depart for Keylong, Atal tunnel, Solang Valley, paragliding, horse riding, Gandola, and many more
+                    fun activities. and end the day by arriving at Hotel Riverbank in Manali. </td>
+                <td>Hotel Riverbank, Manali</td>
+            </tr>
+            <tr>
+                <td>05/06/2024</td>
+                <td>Manali local sightseeing, which includes Hidimba temple and Maal road market. Depart to Delhi by
+                    Volvo bus. </td>
+                <td>Night Journey</td>
+            </tr>
+            <tr>
+                <td>06/06/2024</td>
+                <td>Take a flight from Indira Gandhi National Airport to Ahmedabad airport.</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <section id="camp-charges">
+        <h1 class="hh1">Pricing</h1>
+
+        <table>
+            <tbody>
+                <tr>
+                    <th><span class="highlightss">Room share</span></th>
+                    <th><span class="highlights">Pricing</span></th>
+                </tr>
+                <tr>
+                    <td>Room shared by 3 people</td>
+                    <td>Rs. 49,000/-</td>
+                </tr>
+                <tr>
+                    <td>Room shared by couple</td>
+                    <td>Rs. 55,000/-</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="camp-info">
+        <h1 class="hh1">Information to keep in mind</h1>
+        <ul>
+            <li>* Throughout the entirety of the journey, each individual shall bear the responsibility for their own
+                safety
+                and be prepared for any emergent circumstances.</li>
+            <li>* Each participant is accountable for bringing their own warm clothing, flashlight, camphor balls,
+                notepad
+                and
+                pen, sports shoes, and shawl.</li>
+            <li>* Ensure that you keep your original identification and two photographs with you at all times.</li>
+            <li>* A postpaid mobile connection will remain functional which included BSNL and Airtel, whereas prepaid
+                connections will not be
+                operational.</li>
+            <li>* Paragliding, skiing, snow bike rides, camel safaris, and any additional activities will be at the
+                participants' own expense.</li>
+            <li>* Morning breakfast and dinner are provided, however, participants are responsible for their own lunch
+                arrangements due to daily sightseeing activities.</li>
+            <li>* In the event of an emergency situation, modifications to the journey or schedule may be made only with
+                unanimous agreement from all participants regarding the revised itinerary.</li>
+        </ul>
+    </section>
+
+    <section id="information">
+        <h1 class="hh1">Himalaya Adventure Activity Camp</h1>
+
+        <table>
+            <tbody>
+                <tr>
+                    <th><span class="highlights">Details</span></th>
+                    <th><span class="highlights">Information</span></th>
+                </tr>
+                <tr>
+                    <td>Package Includes</td>
+                    <td>Accommodation, Food (Breakfast, Dinner), Transportation (Flight and Bus), Adventure
+                        Activities</td>
+                </tr>
+                <tr>
+                    <td>Registration Deadline</td>
+                    <td>31/04/2024</td>
+                </tr>
+                <tr>
+                    <td>Contact Himalaya Adventure Activity Camp</td>
+                    <td>
+                        <ul>
+                            <li>Website: <a href="https://www.himalayacamps.com">Himalaya Adventure Activity Camp</a>
+                            </li>
+                            <li>Contact: Harshad Solanki +91 9376134035</li>
+                            <li>Email: <a href="mailto:drharshadsolanki@gmail.com">Drharshadsolanki@gmail.com</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Camp Charges</td>
+                    <td>
+                        <ul>
+                            <li>Pricing: Rs. 49,000/- / If booked later than 31/04/2024, transportation charges might
+                                differ.</li>
+                            <li>Room shared by 3 people: Rs. 49,000/-</li>
+                            <li>Room shared by 2 people: Rs. 55,000/-</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+    <button id="backButton">Go Back</button>
+
+
+    <script src="../js/lightbox.js"></script>
+    <div id="lightbox" class="lightbox">
+        <span class="close-button" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-image" class="lightbox-content" src="" alt="Image">
+    </div>
+
+
+</body>
+
+</html>

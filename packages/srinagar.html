@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Himalayacamps</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="../font/fonts.css" />
+    <!-- normalize css -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+
+    <style>
+        /* Add CSS styles here */
+
+        header {
+            min-height: 85vh;
+            padding-top: 7rem;
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/Srinagar.jpg) center/cover no-repeat;
+            background: -o-linear-gradient((rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/Srinagar.jpg) center/cover no-repeat;
+            background: linear-gradient((rgba(103, 102, 102, 0.4)), to(rgba(103, 102, 102, 0.4))), url(../images/Srinagar.jpg) center/cover no-repeat;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        #heading {
+            color: white;
+        }
+
+        #heading2 {
+            color: white;
+            font-size: large;
+        }
+
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image {
+            width: 430px;
+            height: 250px;
+            margin: 15px;
+            border: 2px solid #ccc;
+            border-radius: 9px;
+            overflow: hidden;
+        }
+
+        .image img {
+            max-width: 101%;
+            max-height: 100%;
+            /* object-fit: cover; */
+            object-fit: fill;
+        }
+
+        h3 {
+            text-align: center;
+            /* color: rgb(237, 146, 18); */
+            color: rgb(2, 17, 47);
+            /* background-color: rgb(246, 222, 192); */
+        }
+
+        .imagesSection {
+            /* background-color: white; */
+            background: linear-gradient(to bottom, rgba(173, 216, 230, 0.4), rgba(255, 255, 255, 0.4));
+            /* background: url("gif2.gif") center/cover no-repeat; */
+        }
+
+        .image {
+            transition: transform 0.3s;
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        /* Add this CSS to your existing stylesheet */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .lightbox-content {
+            display: block;
+            margin: 0 auto;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 35px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #heading {
+            color: white;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                /* optional */
+            }
+
+            .image {
+                width: 40%;
+                /* Adjust width as needed */
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="flex header-sm">
+        <div class="container">
+            <div class="header-title">
+                <h1>Srinagar</h1>
+                <h2 id="heading">&quot;On earth, there is no heaven, but there are pieces of it, and Srinagar is one of them.&quot;</h2>
+                    <!-- <p>Srinagar, the summer capital of the Indian-administered union territory of Jammu and Kashmir, is
+                        renowned for its breathtaking natural beauty. Nestled in the Himalayan region, Srinagar is a
+                        place of unparalleled charm and serenity.</p> -->
+            </div>
+        </div>
+    </header>
+    <br>
+
+    <!-- <div class="packages-item">
+
+        <br>
+        <ul class="package-included">
+            <li>Shikara</li>
+            <li>Sonmarg</li>
+            <li>Gulmarg</li>
+            <li>Pahalgam</li>
+            <li>Local Sightseeing</li>
+        </ul>
+        <br>
+
+    </div> -->
+
+    <section class="imagesSection">
+        <div class="image-container">
+            <div class="image image-wrapper3 gallery-item shadow">
+                <h3>Dal Lake - Shikara</h3>
+                <img src="../images/activites/shikara.jpg" height="250px" width="430px" alt="Image 1"
+                    onclick="openLightbox('../images/activites/shikara.jpg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Dal Lake - House Boat</h3>
+                <img src="../images/activites/houseboat.jpg" height="250px" width="430px" alt="Image 2"
+                    onclick="openLightbox('../images/activites/houseboat.jpg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Dal Lake - House Boat</h3>
+                <img src="../images/activites/houseboatInterial.jpg" height="250px" width="430px" alt="Image 2"
+                    onclick="openLightbox('../images/activites/houseboatInterial.jpg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Sonmarg</h3>
+                <img src="../images//activites/sonmarg (2).jpg" height="250px" width="430px" alt="Image 3"
+                    onclick="openLightbox('../images/activites/sonmarg (2).jpg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Gulmarg</h3>
+                <img src="../images//activites/gulmarg.jpg" height="250px" width="430px" alt="Image 3"
+                    onclick="openLightbox('../images/activites/gulmarg.jpg')" />
+            </div>
+            <div class="image image-wrapper3">
+                <h3>Pahalgam</h3>
+                <img src="../images//activites/pahalgam.webp" height="250px" width="430px" alt="Image 3"
+                    onclick="openLightbox('../images/activites/pahalgam.webp')" />
+            </div>
+            <!-- Add more images as needed -->
+    </section>
+
+    <!--ITINERARY-->
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hh1 {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            margin-bottom: 1em;
+
+        }
+
+        section {
+            padding: 1em;
+            margin-bottom: 1.5em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .pp1 {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .highlight {
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+        }
+
+        th,
+        td {
+            padding: 0.5em;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+    <h1 class="hh1">Amazing Travel Package</h1>
+
+    <section id="destination">
+        <h2>Destination: <span class="highlight">Srinagar, Kashmir</span></h2>
+    </section>
+
+    <section id="itinerary">
+        <h2>Itinerary</h2>
+        <p class="pp1">
+            <span class="highlight">Day 1: </span> Departure: On February 10, 2024 from the Ahmedabad
+            airport, travel to Delhi and then Srinagar, hotel check-in; evening activities include a 2-hour
+            Shikara ride and a nighttime bonfire.
+            <br><br>
+            <span class="highlight">Day 2: </span> Travel 85 kilometers from Srinagar to Gulmarg Snow Point.
+            <br><br>
+            <span class="highlight">Day 3: </span> Pahalgam sightseeing, 100 kilometers from Srinagar
+            <br><br>
+            <span class="highlight">Day 4: </span> Trip to Sonmarg snow point from Srinagar
+            <br><br>
+            <span class="highlight">Day 5: </span> Visit Dudh Patni snow point
+            <br><br>
+            <span class="highlight">Day 6: </span> Sightseeing: Tulip Garden, Mughal Garden, Shankaracharya Mandir
+            - Airport drop for the return flight to Ahmedabad.
+            <br><br>
+        </p>
+    </section>
+
+    <section id="accommodation">
+        <h2>Accommodation: <span class="highlight">Houseboat / Hotel</span></h2>
+        <p class="pp1">Indulge in the comfort of our exclusive hotel with breathtaking views, top-notch amenities, and
+            an extra-ordinary service.</p>
+    </section>
+
+    <!-- <section id="pricing">
+        <h2>Pricing</h2>
+        <p class="pp1">Package Cost: <span class="highlight">$2000</span></p>
+        <p class="pp1">Inclusions: Flights, Accommodation, Meals, Excursions</p>
+    </section> -->
+
+    <section id="camp-charges">
+        <h1 class="hh1">Pricing</h1>
+        <table>
+            <tr>
+                <th><span class="highlight">Flight (Ahmedabar to Srinagar & Return)</span></th>
+                <th><span class="highlight">Details</span></th>
+            </tr>
+            <tr>
+                <td>Total Charges</td>
+                <td>Rs. 38,000 or more. (Varies according to flight charges)/-</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="activities">
+        <h1 class="hh1">Activities in Srinagar</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th><span class="highlight">Activites</span></th>
+                    <th><span class="highlight">Details</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Shikara</td>
+                    <td>Included</td>
+                </tr>
+                <tr>
+                    <td>Horse Riding</td>
+                    <td>Cost Not Included</td>
+                </tr>
+                <tr>
+                    <td>Campfire</td>
+                    <td>Included</td>
+                </tr>
+                <tr>
+                    <td>Trekking</td>
+                    <td>Included</td>
+                </tr>
+                <tr>
+                    <td>Snow Activites</td>
+                    <td>Cost Not Included</td>
+                </tr>
+                <tr>
+                    <td>Stay in Houseboat</td>
+                    <td>Cost Not Included</td>
+                </tr>
+                <tr>
+                    <td>Local Sightseeing</td>
+                    <td>Included</td>
+                </tr>
+                <tr>
+                    <td>Camping in Tents</td>
+                    <td>Cost Not Included</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="camps">
+        <h1 class="hh1">Camp Schedule</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th><span class="highlight">Week</span></th>
+                    <th><span class="highlight">Start Date</span></th>
+                    <th><span class="highlight">End Date</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+                <!-- <tr>
+                    <td>1</td>
+                    <td>28/4/24</td>
+                    <td>5/5/24</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>04/5/24</td>
+                    <td>11/5/24</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>11/5/24</td>
+                    <td>18/5/24</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>17/5/24</td>
+                    <td>23/5/24</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>22/5/24</td>
+                    <td>29/5/24</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="information">
+        <h1 class="hh1">Himalaya Adventure Activity Camp</h1>
+        <table>
+            <tr>
+                <th><span class="highlight">Details</span></th>
+                <th><span class="highlight">Information</span></th>
+            </tr>
+            <tr>
+                <td>Package Includes</td>
+                <td>Accommodation, Food (Breakfast, Lunch, and Dinner), Transportation (Train and Bus), Adventure
+                    Activities</td>
+            </tr>
+            <tr>
+                <td>Registration Deadline</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Contact Himalaya Adventure Activity Camp</td>
+                <td>
+                    <ul>
+                        <li>Website: <a href="https://www.himalayaadventurecamp.com">Himalaya Adventure Activity
+                                Camp</a></li>
+                        <li>Contact: Harshad Solanki +91 9376134035</li>
+                        <li>Email: <a href="mailto:drharshadsolanki@gmail.com">Drharshadsolanki@gmail.com</a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Camp Charges (Flight : Ahmedabad to Srinagar & Return)</td>
+                <td>
+                    <ul>
+                        <li>Booking Requires an Advance Payment of 50% of total amount/-</li>
+                        <li>Charges: Rs. 38,000 or more (Varies according to flight charges)/-</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <!-- <tr>
+                <td>Bank Account Details</td>
+                <td>
+                    <ul>
+                        <li>Bank: Bank of Baroda, Jivraj Park, Ahmedabad</li>
+                        <li>Account Name: Himalaya Adventure & Yog Activity Camp</li>
+                        <li>Account Number: 46850200000078</li>
+                        <li>NEFT IFSC Code: BARB0JIVRAJ</li>
+                    </ul>
+                </td>
+            </tr> -->
+        </table>
+    </section>
+
+
+
+    <button id="backButton">Go Back</button>
+
+
+
+    <script src="../js/lightbox.js"></script>
+    <div id="lightbox" class="lightbox">
+        <span class="close-button" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-image" class="lightbox-content" src="" alt="Image">
+    </div>
+
+
+</body>
+
+</html>
